@@ -19,5 +19,3 @@ Tested using Scriptbench (1000 tests ran with 10000 blank functions)
 | **DarkScythe** | `2669 ps` | `1946 ps` | `694 ps` |
 
 [IExplodeU](https://github.com/realllityyy/IExplodeU)
-
--# if you're a certain super pro DNI.
