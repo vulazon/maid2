@@ -1,0 +1,16 @@
+name = "vulazon/maid2"
+version = "0.1.0"
+description = "light-weight cleanup manager"
+authors = ["Vula"]
+repository = "https://github.com/vulazon/maid2"
+license = "MIT"
+
+[target]
+environment = "roblox"
+
+[indices]
+default = "https://github.com/pesde-pkg/index"
+
+[engines]
+pesde = "^0.7.0"
+lune = "^0.10.2"
