@@ -1,12 +1,14 @@
 name = "vulazon/maid2"
 version = "0.1.0"
-description = "light-weight cleanup manager"
 authors = ["Vula"]
 repository = "https://github.com/vulazon/maid2"
+includes = ["pesde.toml", "README.md", "LICENSE", "src/*"]
 license = "MIT"
 
 [target]
 environment = "roblox"
+lib = "src/init.luau"
+build_files = ["src"]
 
 [indices]
 default = "https://github.com/pesde-pkg/index"
