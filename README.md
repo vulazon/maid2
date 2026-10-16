@@ -18,4 +18,6 @@ Tested using Scriptbench (1000 tests ran with 10000 blank functions)
 | **Job** | `2223 ps` | `1111 ps` | `1054 ps` |
 | **DarkScythe** | `2669 ps` | `1946 ps` | `694 ps` |
 
-[IExplodeU](https://github.com/realllityyy/IExplodeU)
+[IExplodeU](https://github.com/realllityyy/IExplodeU) / Benchmark
+[ThreadReaper](https://github.com/DivineNot/Thread-Reaper) / Used for Maid2 cancelling threads and such
+[Fang](https://github.com/DivineNot/Fang) / Benchmark
