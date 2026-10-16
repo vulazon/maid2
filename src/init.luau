@@ -186,7 +186,9 @@ local function dispose(i: any)
 	local t = typeof(i)
 
 	if t == "RBXScriptConnection" then
-		i:Disconnect()
+		if i.Connected then
+			i:Disconnect()
+		end
 	elseif t == "Instance" then
 		i:Destroy()
 	elseif t == "function" then
@@ -278,7 +280,8 @@ local function schedule(self: Maid, delay: number?, fn: fn)
 		error("attempting to call a maid function while destroying it")
 	end
 
-	local t; t = task.delay(delay or 3, function(...)
+	local t
+	t = task.delay(delay or 3, function(...)
 		pop(self, t)
 		fn(...)
 	end)
