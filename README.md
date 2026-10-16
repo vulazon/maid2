@@ -1,6 +1,6 @@
 # Maid2
 
-A cleanup manager like Janitor, Maid, Trove and Dumpster but **much** faster and lighter.
+A OOP cleanup manager like Janitor, Maid, Trove and Dumpster but **much** faster and lighter.
 
 Uses SOME types from Trove, not everything
 
@@ -19,3 +19,5 @@ Tested using Scriptbench (1000 tests ran with 10000 blank functions)
 | **DarkScythe** | `2669 ps` | `1946 ps` | `694 ps` |
 
 [IExplodeU](https://github.com/realllityyy/IExplodeU)
+
+-# if you're a certain super pro DNI.
