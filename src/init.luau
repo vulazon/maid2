@@ -440,6 +440,10 @@ function Maid.Clean(self: Maid)
 			else
 				destroyUncached(i, meta)
 			end
+		elseif t == "RBXScriptConnection" then
+			if i.Connected then
+				i:Disconnect()
+			end
 		elseif t == "thread" then
 			const status = coroutine.status(i)
 			if status == "suspended" then
