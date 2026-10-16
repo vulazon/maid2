@@ -8,10 +8,12 @@ Uses SOME types from Trove, not everything
 
 Tested using Scriptbench (1000 tests ran with 10000 blank functions)
 
-- DarkScythe: 2669ps (Add: 1946ps, Clean: 694ps)
-- Job: 2223ps (Add: 1111ps, Clean: 1054ps)
-- Warden: 1719ps (Add: 1029ps, Clean: 636ps)
-- Cleaner: 1587ps (Add: 1157ps, Clean: 374ps)
-- Maid: 1580ps (Add: 1134ps, Clean: 404ps)
-- Fang: 1568ps (Add: 1105ps, Clean: 416ps)
-- IExplodeU: 1491ps (Add: 1091ps, Clean: 374ps)
+| Library | Total Time | Add Time | Clean Time |
+| :--- | :--- | :--- | :--- |
+| **IExplodeU** | `1491 ps` | `1091 ps` | `374 ps` |
+| **Fang** | `1568 ps` | `1105 ps` | `416 ps` |
+| **Maid** | `1580 ps` | `1134 ps` | `404 ps` |
+| **Cleaner** | `1587 ps` | `1157 ps` | `374 ps` |
+| **Warden** | `1719 ps` | `1029 ps` | `636 ps` |
+| **Job** | `2223 ps` | `1111 ps` | `1054 ps` |
+| **DarkScythe** | `2669 ps` | `1946 ps` | `694 ps` |
