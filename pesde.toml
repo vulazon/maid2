@@ -1,5 +1,5 @@
 name = "vulazon/maid2"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Vula"]
 repository = "https://github.com/vulazon/maid2"
 includes = ["pesde.toml", "README.md", "LICENSE", "src/*"]
