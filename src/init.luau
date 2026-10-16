@@ -23,6 +23,7 @@ type Methods = {
 	Remove: <T>(self: Maid, object: T & Trackable) -> boolean,
 	Pop: <T>(self: Maid, object: T & Trackable) -> boolean,
 	AttachToInstance: <T>(self: Maid, object: T & Trackable) -> RBXScriptConnection,
+	Schedule: (self: Maid, delay: number?, fn: fn) -> thread,
 	Construct: <T, A...>(self: Maid, class: Constructable<T, A...>, A...) -> T,
 	Extend: (self: Maid, destroyWhenCleaned: boolean?) -> Maid, -- final function im adding after construct so this wont be as bloated but good
 	Connect: (
@@ -272,6 +273,21 @@ local function connect(self: Maid, object: SignalLike | SignalLikeMetatable, fn:
 	return connection
 end
 
+local function schedule(self: Maid, delay: number?, fn: fn)
+	if self.Destroying then
+		error("attempting to call a maid function while destroying it")
+	end
+
+	local t; t = task.delay(delay or 3, function(...)
+		pop(self, t)
+		fn(...)
+	end)
+
+	table.insert(self.Tasks, t)
+
+	return t
+end
+
 local function once(self: Maid, object: SignalLike | SignalLikeMetatable, fn: fn)
 	if self.Destroying then
 		error("attempting to call a maid function while destroying it")
@@ -320,6 +336,7 @@ Maid.Remove = remove
 Maid.Connect = connect
 Maid.Construct = construct
 Maid.Once = once
+Maid.Schedule = schedule
 
 function Maid.new(): Maid
 	local self: Maid = setmetatable({ Tasks = { nil, nil, nil, nil, nil }, Cleaning = false, Destroying = false }, Maid)
